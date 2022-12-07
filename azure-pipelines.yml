@@ -1,0 +1,59 @@
+# Android
+# Build your Android project with Gradle.
+# Add steps that test, sign, and distribute the APK, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/android
+
+trigger:
+  paths:
+    include:
+    - release/*
+
+variables:
+  ProjectDirectory: '$(Build.SourcesDirectory)'
+  BuildMessage: '$(Build.SourceVersionMessage)'
+  BuildNumber: '1.0.0'
+  BuildName: 'V1.0.0-local'
+  APK_PATH: '/build/app/outputs/flutter-apk/app-release.apk'
+  BuildDirectory: '$(ProjectDirectory)$(APK_PATH)'
+
+pool:
+  vmImage: 'macos-latest'
+steps:
+- task: PowerShell@2
+  displayName: 'Setup variables (public)'
+  inputs:
+    targetType: 'inline'
+    script: |
+      $BuildNumber = "$(Build.BuildNumber)".Split(".")[0]
+      Write-Host "##vso[task.setvariable variable=BuildNumber;]$BuildNumber"
+- task: FlutterInstall@0
+  displayName: 'Install Flutter'
+  inputs:
+    channel: 'beta'
+    version: 'latest'
+- task: FlutterBuild@0
+  displayName: 'Build Android App'
+  inputs:
+    target: 'apk'
+    projectDirectory: '$(ProjectDirectory)'
+    buildName: '$(BuildNumber)'
+    buildNumber: '$(BuildNumber)'
+- task: CopyFiles@2
+  displayName: 'Copy Build app to ArtifactStagingDirectory' 
+  inputs:    
+    contents: '$(BuildDirectory)'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+- task: PublishBuildArtifacts@1
+  displayName: Publish Artifact
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'AndroidApp'
+- task: AppCenterDistribute@3
+  inputs:
+    serverEndpoint: 'AppCenterKonradLorenz'
+    appSlug: 'jorge.contrerasp-konradlorenz.edu.co/31628-G51-2021-1-team3'
+    appFile: '$(BuildDirectory)'
+    symbolsOption: 'Android'
+    releaseNotesOption: 'input'
+    releaseNotesInput: 'Build automatically.'
+    destinationType: 'groups'

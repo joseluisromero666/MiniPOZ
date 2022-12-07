@@ -1,0 +1,23 @@
+{
+  "name": "flutter_app",
+  "description": "A new Flutter project.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "@google-cloud/firestore": "4.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@ssh.dev.azure.com:v3/31628-G51-2021-1-team3/flutter_app/flutter_app"
+  },
+  "author": "",
+  "license": "ISC"
+}

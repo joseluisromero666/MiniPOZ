@@ -1,0 +1,94 @@
+{
+  "project_info": {
+    "project_number": "544703752699",
+    "project_id": "pos-flutter-26725",
+    "storage_bucket": "pos-flutter-26725.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544703752699:android:32d4f7e771bbbfdbd1035e",
+        "android_client_info": {
+          "package_name": "co.edu.konrad.miniPOZ"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544703752699-2kkaa6r020efvan4kjp60gaeqttn4u8r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.edu.konrad.miniPOZ",
+            "certificate_hash": "d2df4c99346c26bc34ce57691f325fda04ff4ff3"
+          }
+        },
+        {
+          "client_id": "544703752699-74pagm27fc1rcfnabvhojk52bb7k6m7p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.edu.konrad.miniPOZ",
+            "certificate_hash": "6f5348ed6dd70157ad3b0749a1a061979e0b93c9"
+          }
+        },
+        {
+          "client_id": "544703752699-7jmpt5uqie57eoip0j12ije23kgc0qov.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.edu.konrad.miniPOZ",
+            "certificate_hash": "6178c3955fce4597ea073e5a343bbe5a83652831"
+          }
+        },
+        {
+          "client_id": "544703752699-ln81iv3pm503i0m6ggae0ag0ccncdu84.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.edu.konrad.miniPOZ",
+            "certificate_hash": "4a33dd0b5b500a54a984b7398f71fd6a3d1ca7de"
+          }
+        },
+        {
+          "client_id": "544703752699-prnsgutokuv95i68ov3qkrdnuj5frckh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.edu.konrad.miniPOZ",
+            "certificate_hash": "0e5a393a6ded80352eda3b99654e4053b9be68c2"
+          }
+        },
+        {
+          "client_id": "544703752699-u7nb69ffudbhkk9r88jpt3i4lv9frdvo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.edu.konrad.miniPOZ",
+            "certificate_hash": "05652d64ae3a2f5c67914e969bd167ad99ddbeac"
+          }
+        },
+        {
+          "client_id": "544703752699-hnbt9pjss3sg4cfkd9rpkeaqv28mtn0u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBS_gcIl530lPT1cTYra-mJ8DGkMS7lr5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544703752699-hnbt9pjss3sg4cfkd9rpkeaqv28mtn0u.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "544703752699-dca4u5vunuula8oq6d1p8fmjkm7qh9mm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "co.edu.konrad.miniPOZ"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
