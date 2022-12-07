@@ -1,4 +1,4 @@
-# app_contabilidad
+# app_MiniPOZ
 
 A new Flutter project.
 
